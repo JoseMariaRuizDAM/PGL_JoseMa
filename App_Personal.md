@@ -24,4 +24,4 @@ La aplicación tendrá una pequeña base de datos en la que se podrá almacenar 
 - Ruta reparto
 
 
-<img src="./granjaApp.drawio.png">
+<img src="./diagramas/granjaApp.drawio.png">
