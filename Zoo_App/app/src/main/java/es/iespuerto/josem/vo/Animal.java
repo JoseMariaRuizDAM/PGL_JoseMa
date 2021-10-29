@@ -8,14 +8,13 @@ import es.iespuerto.josem.model.contract.AnimalContract;
 
 public class Animal {
 
-    int numeroIdentificacion;
+    int numeroIdentificacion, anoNacimiento;
     String especie, sexo, paisOrigen, continente;
-    Date anoNacimiento;
 
     public Animal() {
     }
 
-    public Animal(int númeroIdentificación, String especie, String sexo, String paisOrigen, String continente, Date anoNacimiento) {
+    public Animal(int númeroIdentificación, String especie, String sexo, String paisOrigen, String continente, int anoNacimiento) {
         this.numeroIdentificacion = numeroIdentificacion;
         this.especie = especie;
         this.sexo = sexo;
@@ -31,7 +30,7 @@ public class Animal {
         values.put(AnimalContract.AnimalEntry.SEXO, sexo);
         values.put(AnimalContract.AnimalEntry.PAIS_ORIGEN, paisOrigen);
         values.put(AnimalContract.AnimalEntry.CONTINENTE, continente);
-        values.put(AnimalContract.AnimalEntry.ANO_NACIMIENTO, anoNacimiento.toString());
+        values.put(AnimalContract.AnimalEntry.ANO_NACIMIENTO, anoNacimiento);
         return values;
     }
 }

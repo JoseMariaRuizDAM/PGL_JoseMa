@@ -1,7 +1,13 @@
 package es.iespuerto.josem.model.helper;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 import es.iespuerto.josem.model.contract.AnimalContract;
 import es.iespuerto.josem.vo.Animal;
@@ -49,21 +55,24 @@ public class AnimalHelper extends ComunDBHelper {
      * Funcion encargada de retornar todos los elementos de la BBDD
      * @return Lista vacia o todos los elementos de la BBDD
      */
-    public List<Idea> getAll() {
-        List<Idea> ideas = null;
+    public List<Animal> getAll() {
+        List<Animal> ideas = null;
         Cursor cursor = null;
 
 
         try {
-            cursor = super.getAll(IdeaContract.IdeaEntry.TABLE_NAME,
+            cursor = super.getAll(AnimalContract.AnimalEntry.TABLE_NAME,
                     null, null, null,
                     null, null, null);
 
             if(cursor.moveToFirst()){
                 ideas = new ArrayList<>();
                 do {
-                    @SuppressLint("Range") String user = cursor.getString(cursor.getColumnIndex(IdeaContract.IdeaEntry.IDUSER));
-                    @SuppressLint("Range") String descripcion = cursor.getString(cursor.getColumnIndex(IdeaContract.IdeaEntry.DESCRIPCION));
+                    @SuppressLint("Range") int numeroIdentificacion = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.N_IDENTIFICACION));
+                    @SuppressLint("Range") String continente = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.CONTINENTE));
+                    @SuppressLint("Range") String especie = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.ESPECIE));
+                    @SuppressLint("Range") String sexo = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.SEXO));
+                    @SuppressLint("Range") int nacimiento = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.ANO_NACIMIENTO));
                     Idea idea = new Idea(user, descripcion);
                     ideas.add(idea);
                 } while (cursor.moveToNext());

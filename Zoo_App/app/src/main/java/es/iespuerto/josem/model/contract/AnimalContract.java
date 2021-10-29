@@ -12,7 +12,7 @@ public class AnimalContract {
         public static final String SEXO ="sexo";
         public static final String PAIS_ORIGEN= "paisOrigen";
         public static final String CONTINENTE = "continente";
-        public static final String ANO_NACIMIENTO = "añoNacimiento";
+        public static final String ANO_NACIMIENTO = "anoNacimiento";
 
     }
 }
