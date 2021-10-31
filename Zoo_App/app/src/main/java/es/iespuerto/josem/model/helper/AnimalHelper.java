@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class AnimalHelper extends ComunDBHelper {
      * @return Lista vacia o todos los elementos de la BBDD
      */
     public List<Animal> getAll() {
-        List<Animal> ideas = null;
+        List<Animal> animales = null;
         Cursor cursor = null;
 
 
@@ -66,17 +67,18 @@ public class AnimalHelper extends ComunDBHelper {
                     null, null, null);
 
             if(cursor.moveToFirst()){
-                ideas = new ArrayList<>();
+                animales = new ArrayList<>();
                 do {
                     @SuppressLint("Range") int numeroIdentificacion = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.N_IDENTIFICACION));
+                    @SuppressLint("Range") String paisOrigen = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.PAIS_ORIGEN));
                     @SuppressLint("Range") String continente = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.CONTINENTE));
                     @SuppressLint("Range") String especie = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.ESPECIE));
                     @SuppressLint("Range") String sexo = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.SEXO));
-                    @SuppressLint("Range") int nacimiento = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.ANO_NACIMIENTO));
-                    Idea idea = new Idea(user, descripcion);
-                    ideas.add(idea);
+                    @SuppressLint("Range") int anoNacimiento = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.ANO_NACIMIENTO));
+                    Animal animal = new Animal(numeroIdentificacion, continente,paisOrigen, especie, sexo, anoNacimiento);
+                    animales.add(animal);
                 } while (cursor.moveToNext());
-                return ideas;
+                return animales;
             }
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
@@ -95,28 +97,33 @@ public class AnimalHelper extends ComunDBHelper {
      * @param idUser identificador del usuario
      * @return Lista vacia o todos los elementos de la BBDD
      */
-    public List<Idea> getAll(String idUser) {
-        List<Idea> ideas = null;
+    public List<Animal> getAll(String idAnimal) {
+        List<Animal> animales = null;
         Cursor cursor = null;
 
 
         try {
-            cursor = super.getAll(IdeaContract.IdeaEntry.TABLE_NAME,
+            cursor = super.getAll(AnimalContract.AnimalEntry.TABLE_NAME,
                     null,
-                    IdeaContract.IdeaEntry.IDUSER + " = ?",
-                    new String[]{idUser},
+                    AnimalContract.AnimalEntry.N_IDENTIFICACION + " = ?",
+                    new String[]{idAnimal},
                     null,
                     null,
                     null);
 
             if(cursor.moveToFirst()){
-                ideas = new ArrayList<>();
+                animales = new ArrayList<>();
                 do {
-                    @SuppressLint("Range") String descripcion = cursor.getString(cursor.getColumnIndex(IdeaContract.IdeaEntry.DESCRIPCION));
-                    Idea idea = new Idea(idUser, descripcion);
-                    ideas.add(idea);
+                    @SuppressLint("Range") int numeroIdentificacion = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.N_IDENTIFICACION));
+                    @SuppressLint("Range") String paisOrigen = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.PAIS_ORIGEN));
+                    @SuppressLint("Range") String continente = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.CONTINENTE));
+                    @SuppressLint("Range") String especie = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.ESPECIE));
+                    @SuppressLint("Range") String sexo = cursor.getString(cursor.getColumnIndex(AnimalContract.AnimalEntry.SEXO));
+                    @SuppressLint("Range") int anoNacimiento = cursor.getInt(cursor.getColumnIndex(AnimalContract.AnimalEntry.ANO_NACIMIENTO));
+                    Animal animal = new Animal(numeroIdentificacion, continente,paisOrigen, especie, sexo, anoNacimiento);
+                    animales.add(animal);
                 } while (cursor.moveToNext());
-                return ideas;
+                return animales;
             }
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
@@ -137,22 +144,22 @@ public class AnimalHelper extends ComunDBHelper {
      * @return valor con el resultado de la operacion
      */
     public int delete(String id) {
-        return super.delete(UserContract.UserEntry.TABLE_NAME,
-                IdeaContract.IdeaEntry._ID + " = ?",
+        return super.delete(AnimalContract.AnimalEntry.TABLE_NAME,
+                AnimalContract.AnimalEntry.N_IDENTIFICACION + " = ?",
                 new String[]{id});
     }
 
     /**
      * Funcion encargada de realizar la actualizacion de un elemento
      * de la BBDD
-     * @param idea idea a actualizar en la app
+     * @param animal idea a actualizar en la app
      * @param id idea relacionado
      * @return intero con el valor de la operacion
      */
-    public int update(Idea idea, String id) {
-        return super.update(IdeaContract.IdeaEntry.TABLE_NAME,
-                idea.toContentValues(),
-                IdeaContract.IdeaEntry._ID + " = ?",
+    public int update(Animal animal, String id) {
+        return super.update(AnimalContract.AnimalEntry.TABLE_NAME,
+                animal.toContentValues(),
+                AnimalContract.AnimalEntry.N_IDENTIFICACION + " = ?",
                 new String[]{id});
     }
 }
