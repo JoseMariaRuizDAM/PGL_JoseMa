@@ -33,4 +33,52 @@ public class Animal {
         values.put(AnimalContract.AnimalEntry.ANO_NACIMIENTO, anoNacimiento);
         return values;
     }
+
+    public int getNumeroIdentificacion() {
+        return numeroIdentificacion;
+    }
+
+    public void setNumeroIdentificacion(int numeroIdentificacion) {
+        this.numeroIdentificacion = numeroIdentificacion;
+    }
+
+    public int getAnoNacimiento() {
+        return anoNacimiento;
+    }
+
+    public void setAnoNacimiento(int anoNacimiento) {
+        this.anoNacimiento = anoNacimiento;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getPaisOrigen() {
+        return paisOrigen;
+    }
+
+    public void setPaisOrigen(String paisOrigen) {
+        this.paisOrigen = paisOrigen;
+    }
+
+    public String getContinente() {
+        return continente;
+    }
+
+    public void setContinente(String continente) {
+        this.continente = continente;
+    }
 }
