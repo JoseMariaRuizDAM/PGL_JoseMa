@@ -1,18 +1,11 @@
 package es.iespuerto.josem.model.helper;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import es.iespuerto.josem.model.contract.AnimalContract;
 import es.iespuerto.josem.model.contract.EspecieContract;
 import es.iespuerto.josem.vo.Animal;
-import es.iespuerto.josem.vo.Especie;
 
 public class EspecieHelper extends ComunDBHelper {
 
@@ -38,41 +31,38 @@ public class EspecieHelper extends ComunDBHelper {
     /**
      * Funcion encargada en realizar el almacenamiento de un usuario
      *
-     * @param especie Animal de la BBDD
+     * @param animal Animal de la BBDD
      * @return identificador con el resultado en el proceso de almacenar
      * en la BBDD
      */
-    public long save(Especie especie) {
+    public long save(Animal animal) {
         return super.save(AnimalContract.AnimalEntry.TABLE_NAME,
-                especie.toContentValues());
+                animal.toContentValues());
     }
 
     /**
      * Funcion encargada de retornar todos los elementos de la BBDD
      * @return Lista vacia o todos los elementos de la BBDD
      */
-    public List<Especie> getAll() {
-        List<Especie> especies = null;
+    public List<Idea> getAll() {
+        List<Idea> ideas = null;
         Cursor cursor = null;
 
 
         try {
-            cursor = super.getAll(EspecieContract.EspecieEntry.TABLE_NAME,
+            cursor = super.getAll(IdeaContract.IdeaEntry.TABLE_NAME,
                     null, null, null,
                     null, null, null);
 
             if(cursor.moveToFirst()){
-                especies = new ArrayList<>();
+                ideas = new ArrayList<>();
                 do {
-                    @SuppressLint("Range") String _id = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry._ID));
-                    @SuppressLint("Range") String nombreVulgar = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry.NOMBRE_VULGAR));
-                    @SuppressLint("Range") String nombreCientifico = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry.NOMBRE_CIENTIFICO));
-                    @SuppressLint("Range") String familia = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry.FAMILIA));
-                    @SuppressLint("Range") boolean peligroExtincion = cursor.equals(cursor.getColumnIndex(EspecieContract.EspecieEntry.PELIGRO_EXTINCION));
-                    Especie especie = new Especie(nombreVulgar, nombreCientifico, familia, peligroExtincion);
-                    especies.add(especie);
+                    @SuppressLint("Range") String user = cursor.getString(cursor.getColumnIndex(IdeaContract.IdeaEntry.IDUSER));
+                    @SuppressLint("Range") String descripcion = cursor.getString(cursor.getColumnIndex(IdeaContract.IdeaEntry.DESCRIPCION));
+                    Idea idea = new Idea(user, descripcion);
+                    ideas.add(idea);
                 } while (cursor.moveToNext());
-                return especies;
+                return ideas;
             }
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
@@ -88,35 +78,31 @@ public class EspecieHelper extends ComunDBHelper {
 
     /**
      * Funcion encargada de retornar todos los elementos de la BBDD
-     * @param id identificador del usuario
+     * @param idUser identificador del usuario
      * @return Lista vacia o todos los elementos de la BBDD
      */
-    public List<Especie> getAll(String id) {
-        List<Especie> especies = null;
+    public List<Idea> getAll(String idUser) {
+        List<Idea> ideas = null;
         Cursor cursor = null;
 
 
         try {
-            cursor = super.getAll(EspecieContract.EspecieEntry.TABLE_NAME,
+            cursor = super.getAll(IdeaContract.IdeaEntry.TABLE_NAME,
                     null,
-                    EspecieContract.EspecieEntry._ID + " = ?",
-                    new String[]{id},
+                    IdeaContract.IdeaEntry.IDUSER + " = ?",
+                    new String[]{idUser},
                     null,
                     null,
                     null);
 
             if(cursor.moveToFirst()){
-                especies = new ArrayList<>();
+                ideas = new ArrayList<>();
                 do {
-                    @SuppressLint("Range") String _id = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry._ID));
-                    @SuppressLint("Range") String nombreVulgar = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry.NOMBRE_VULGAR));
-                    @SuppressLint("Range") String nombreCientifico = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry.NOMBRE_CIENTIFICO));
-                    @SuppressLint("Range") String familia = cursor.getString(cursor.getColumnIndex(EspecieContract.EspecieEntry.FAMILIA));
-                    @SuppressLint("Range") boolean peligroExtincion = cursor.equals(cursor.getColumnIndex(EspecieContract.EspecieEntry.PELIGRO_EXTINCION));
-                    Especie especie = new Especie(nombreVulgar, nombreCientifico, familia, peligroExtincion);
-                    especies.add(especie);
+                    @SuppressLint("Range") String descripcion = cursor.getString(cursor.getColumnIndex(IdeaContract.IdeaEntry.DESCRIPCION));
+                    Idea idea = new Idea(idUser, descripcion);
+                    ideas.add(idea);
                 } while (cursor.moveToNext());
-                return especies;
+                return ideas;
             }
         } catch (Exception exception) {
             // TODO: Se debe de implementar las excepciones
@@ -137,22 +123,22 @@ public class EspecieHelper extends ComunDBHelper {
      * @return valor con el resultado de la operacion
      */
     public int delete(String id) {
-        return super.delete(EspecieContract.EspecieEntry.TABLE_NAME,
-                EspecieContract.EspecieEntry._ID + " = ?",
+        return super.delete(UserContract.UserEntry.TABLE_NAME,
+                IdeaContract.IdeaEntry._ID + " = ?",
                 new String[]{id});
     }
 
     /**
      * Funcion encargada de realizar la actualizacion de un elemento
      * de la BBDD
-     * @param especie idea a actualizar en la app
+     * @param idea idea a actualizar en la app
      * @param id idea relacionado
      * @return intero con el valor de la operacion
      */
-    public int update(Especie especie, String id) {
-        return super.update(EspecieContract.EspecieEntry.TABLE_NAME,
-                especie.toContentValues(),
-                EspecieContract.EspecieEntry._ID + " = ?",
+    public int update(Idea idea, String id) {
+        return super.update(IdeaContract.IdeaEntry.TABLE_NAME,
+                idea.toContentValues(),
+                IdeaContract.IdeaEntry._ID + " = ?",
                 new String[]{id});
     }
 }

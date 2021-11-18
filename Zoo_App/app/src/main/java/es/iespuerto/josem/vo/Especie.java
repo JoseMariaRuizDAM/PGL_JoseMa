@@ -29,35 +29,4 @@ public class Especie {
         return values;
     }
 
-    public String getNombreVulgar() {
-        return nombreVulgar;
-    }
-
-    public void setNombreVulgar(String nombreVulgar) {
-        this.nombreVulgar = nombreVulgar;
-    }
-
-    public String getNombreCientífico() {
-        return nombreCientífico;
-    }
-
-    public void setNombreCientífico(String nombreCientífico) {
-        this.nombreCientífico = nombreCientífico;
-    }
-
-    public String getFamilia() {
-        return familia;
-    }
-
-    public void setFamilia(String familia) {
-        this.familia = familia;
-    }
-
-    public boolean isPeligroExtinción() {
-        return peligroExtinción;
-    }
-
-    public void setPeligroExtinción(boolean peligroExtinción) {
-        this.peligroExtinción = peligroExtinción;
-    }
 }

@@ -67,7 +67,7 @@ public class ZooHelper extends ComunDBHelper{
             if(cursor.moveToFirst()){
                 zooList = new ArrayList<>();
                 do {
-                    @SuppressLint("Range") String nombre = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.NOMBRE));
+                    @SuppressLint("Range") String nombre = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.NOMBRE);
                     @SuppressLint("Range") String ciudad = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.CIUDAD));
                     @SuppressLint("Range") String pais = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.CIUDAD));
                     @SuppressLint("Range") double tamano = cursor.getDouble(cursor.getColumnIndex(ZooContract.ZooEntry.TAMANO));
@@ -112,7 +112,7 @@ public class ZooHelper extends ComunDBHelper{
             if(cursor.moveToFirst()){
                 zooList = new ArrayList<>();
                 do {
-                    @SuppressLint("Range") String nombre = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.NOMBRE));
+                    @SuppressLint("Range") String nombre = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.NOMBRE);
                     @SuppressLint("Range") String ciudad = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.CIUDAD));
                     @SuppressLint("Range") String pais = cursor.getString(cursor.getColumnIndex(ZooContract.ZooEntry.CIUDAD));
                     @SuppressLint("Range") double tamano = cursor.getDouble(cursor.getColumnIndex(ZooContract.ZooEntry.TAMANO));

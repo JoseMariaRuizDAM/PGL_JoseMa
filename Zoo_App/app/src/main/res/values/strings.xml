@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Zoo_App</string>
+    <string name="volver_zoo_principal">Volver a Zoo Principal</string>
+    <string name="boton_volver_principal">Volver a Pantalla Principal</string>
+    <string name="boton_crear_zoo">Crear un Zoo</string>
+    <string name="boton_modificar_zoo">Modificar Zoo</string>
+    <string name="boton_ir_pantalla_Zoo">Pantalla Zoo</string>
+    <string name="boton_ir_pantalla_Animal">Pantalla Animal</string>
+    <string name="boton_ir_pantalla_Especie">Pantalla Especie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
