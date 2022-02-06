@@ -38,11 +38,8 @@ public class ListaAlumnosAdapter extends RecyclerView.Adapter<ListaAlumnosAdapte
         Alumnos p = dataset.get(position);
         holder.dniAlumno.setText(p.getDni());
         holder.nombreAlumno.setText(p.getNombre());
-        /*
         holder.apellidosAlumno.setText(p.getApellidos());
-        holder.nacimientoAlumno.setText((int) p.getFechaNacimiento());
-
-         */
+        holder.nacimientoAlumno.setText(String.valueOf(p.getFechaNacimiento()));
     }
 
     @Override
@@ -59,21 +56,16 @@ public class ListaAlumnosAdapter extends RecyclerView.Adapter<ListaAlumnosAdapte
 
         private TextView dniAlumno;
         private TextView nombreAlumno;
-        /*
         private TextView apellidosAlumno;
         private TextView nacimientoAlumno;
 
-
-         */
         public ViewHolder(View itemView) {
             super(itemView);
 
             dniAlumno = itemView.findViewById(R.id.dni_alumno);
             nombreAlumno = itemView.findViewById(R.id.nombre_alumno);
-            /*
             apellidosAlumno = itemView.findViewById(R.id.apellidos_alumno);
             nacimientoAlumno = itemView.findViewById(R.id.nacimiento_alumno);
-        */
         }
 
 

@@ -3,14 +3,26 @@ package com.JoseMaria.institutoapp.model;
 import android.content.ContentValues;
 
 import com.JoseMaria.institutoapp.database.contract.AlumnosContract;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Alumnos {
 
+    @SerializedName("dni")
+    @Expose
+    private String dni;
 
-    String dni;
-    String nombre;
-    String apellidos;
-    long fechaNacimiento;
+    @SerializedName("nombre")
+    @Expose
+    private String nombre;
+
+    @SerializedName("apellidos")
+    @Expose
+    private String apellidos;
+
+    @SerializedName("fechaNacimiento")
+    @Expose
+    private long fechaNacimiento;
 
     //Constructor vacio por defecto
     public Alumnos(){
