@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name=".activity.AlumnoActivity"/>
+        <activity android:name=".activity.AlumnoDetailActivity"/>
     </application>
 
 </manifest>
