@@ -1,9 +1,7 @@
 package com.JoseMaria.institutoapp.activity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -15,7 +13,6 @@ import com.JoseMaria.institutoapp.model.Alumnos;
 import com.JoseMaria.institutoapp.networking.ApiUtils;
 import com.JoseMaria.institutoapp.networking.retrofit.AlumnosService;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,8 +37,6 @@ public class AlumnoActivity extends AppCompatActivity {
         setContentView(R.layout.alumnos_activity);
         service = ApiUtils.getAlumnosService();
 
-
-
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         final GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
@@ -61,9 +56,18 @@ public class AlumnoActivity extends AppCompatActivity {
                     listaAlumnos = response.body();
                     listaAlumnosAdapter = new ListaAlumnosAdapter(context, listaAlumnos);
                     recyclerView.setAdapter(listaAlumnosAdapter);
+                    /*
                     listaAlumnosAdapter.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            Context context = view.getContext();
+                            Intent intent = new Intent(context, AlumnoDetailActivity.class);
+                            /*
+                            intent.putExtra("dni", listaAlumnos.get(getAbsoluteAdapterPosition()).getNumber());
+                            intent.putExtra("nombre", listaAlumnos.get();
+                            intent.putExtra("apellidos", listaAlumnos.get(getAbsoluteAdapterPosition()).getDescription());
+                            startActivity(intent);
+
                             Alumnos alumno = listaAlumnos.get(recyclerView.getChildAdapterPosition(view));
                             Intent intent = new Intent(AlumnoActivity.this, AlumnoDetailActivity.class);
                             Bundle bundle = new Bundle();
@@ -71,7 +75,7 @@ public class AlumnoActivity extends AppCompatActivity {
                             intent.putExtras(bundle);
                             startActivity(intent);
                         }
-                    });
+                    });*/
                 }
             }
 

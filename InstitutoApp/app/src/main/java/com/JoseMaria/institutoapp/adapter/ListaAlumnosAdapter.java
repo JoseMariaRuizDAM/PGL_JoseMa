@@ -1,6 +1,7 @@
 package com.JoseMaria.institutoapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.JoseMaria.institutoapp.R;
+import com.JoseMaria.institutoapp.activity.AlumnoDetailActivity;
 import com.JoseMaria.institutoapp.model.Alumnos;
 
 import java.text.SimpleDateFormat;
@@ -83,6 +85,21 @@ public class ListaAlumnosAdapter extends RecyclerView.Adapter<ListaAlumnosAdapte
             nombreAlumno = itemView.findViewById(R.id.nombre_alumno);
             apellidosAlumno = itemView.findViewById(R.id.apellidos_alumno);
             nacimientoAlumno = itemView.findViewById(R.id.nacimiento_alumno);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = view.getContext();
+                    Intent intent = new Intent(context, AlumnoDetailActivity.class);
+                    /*
+                    intent.putExtra("ID", listPokemon.get(getAbsoluteAdapterPosition()).getNumber());
+                    intent.putExtra("NOMBRE", listPokemon.get(getAbsoluteAdapterPosition()).getName());
+                    intent.putExtra("DESCRIPCION", listPokemon.get(getAbsoluteAdapterPosition()).getDescription());
+
+                     */
+                    context.startActivity(intent);
+                }
+            });
         }
 
 

@@ -6,7 +6,9 @@ import com.JoseMaria.institutoapp.database.contract.AlumnosContract;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Alumnos {
+import java.io.Serializable;
+
+public class Alumnos implements Serializable {
 
     @SerializedName("dni")
     @Expose
