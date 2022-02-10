@@ -264,7 +264,6 @@ Funciones en Haxe:
 
 
 
-## 
-    Juegos hechos con Haxe
+## Juegos hechos con Haxe
 
 
