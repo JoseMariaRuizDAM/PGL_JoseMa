@@ -1,3 +1,4 @@
+[TOC]
 # Introducción
 
 El repositorio que leerás a continuación está creado para presentar el Desarrollo Cross-platform Haxe 4. 
