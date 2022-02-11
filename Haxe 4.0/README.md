@@ -17,11 +17,7 @@ Al ser capaz de ejecutarse en numerosos dispositivos. Este lenguaje de programac
 Entonces, la idea general aquí es que se trata de "un lenguaje para gobernarlos a todos". Por lo que puedes escribir una aplicación en Haxe, luego se compila en otro lenguaje para apuntar a una plataforma. Básicamente, trata el lenguaje de salida (como JavaScript, C#, Python, etc.) como código de bytes para tu aplicación.
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](./pgl/2.jpg)
+![alt_text](../pgl/2.jpg)
 
 
 
