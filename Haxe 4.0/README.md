@@ -1,3 +1,6 @@
+# HAXE 4
+![alt_text](../pgl/unnamed.jpg)
+
 [TOC]
 # Introducción
 
@@ -162,7 +165,6 @@ Luego de haber reiniciado el VSC se crea un nuevo proyecto con las teclas ctrl+s
 Luego se escribe el codigo que queramos compilar. Se abre una nueva terminal y se ejecuta el programa con f5.
 
 En este caso he corrido el programa, “Hola Mundo”
-
 
 ![alt_text](../pgl/12.png)
 
