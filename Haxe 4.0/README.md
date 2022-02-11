@@ -21,7 +21,7 @@ Entonces, la idea general aquí es que se trata de "un lenguaje para gobernarlos
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.jpg). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image1.jpg "image_tooltip")
+![alt_text](./pgl/2.jpg)
 
 
 
@@ -49,7 +49,7 @@ El uso para este motor es para usuarios avanzados, es realmente increíble el re
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](pgl/3.png)
 
 
 El código escrito en Haxe puede ser compilado a código fuente en Adobe Flash, Javascript, Lua, Python, C++, C#, Hashlink, Java y Neko (creado por el mismo desarrollador) y de lado del servidor en PHP,<sup> </sup>Apache CGI y Node.js. A continuación se muestra **una imagen con los lenguajes de programación**, tipo de salida (Output type), y sus principales usos (Main usages):
@@ -59,7 +59,7 @@ El código escrito en Haxe puede ser compilado a código fuente en Adobe Flash, 
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](pgl/4.png)
 
 
 
@@ -85,7 +85,7 @@ Para poder instalar este motor de desarrollo de juegos en 2D, al ser multiplataf
 <p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image4.png "image_tooltip")
+![alt_text](pgl/5.png)
 
 
 
@@ -110,7 +110,7 @@ Para instalar Haxe 4 en Windows, puedes hacer la [descarga en la web oficial](ht
 <p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](pgl/6.png)
 
 
 Una vez se haya descargado el instalador, le apretamos al archivo que **se ha descargado “.exe”**. El cual comenzará con el instalador:
@@ -120,7 +120,7 @@ Una vez se haya descargado el instalador, le apretamos al archivo que **se ha de
 <p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](pgl/7.png)
 
 
 En cuanto vayamos a instalar Haxe 4, también podemos instalar Neko, ya que viene dentro del instalador. Neko es **una máquina virtual** que ha creado el equipo de Haxe, para complementar y ser una herramienta más para Haxe.
@@ -130,7 +130,7 @@ En cuanto vayamos a instalar Haxe 4, también podemos instalar Neko, ya que vien
 <p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image7.png "image_tooltip")
+![alt_text](pgl/8.png)
 
 
 Una vez le damos a siguiente, nos pregunta dónde queremos instalar el software y en cuanto le demos a aceptar, comenzará la instalación. Cuando esta termine, ya habrá finalizado todo y tendrás instalado Haxe 4 en windows y si has añadido Neko en la instalación, también estará en el ordenador.
@@ -145,7 +145,7 @@ Para desinstalar Haxe 4 en windows, debes de dirigirte a la carpeta donde lo tie
 <p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](pgl/9.png)
 
 
 
@@ -166,7 +166,7 @@ haxelib install flixel
 <p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image9.png "image_tooltip")
+![alt_text](pgl/10.png)
 
 
 A continuación se escribe:
@@ -182,7 +182,7 @@ haxelib install openfl
 <p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image10.png "image_tooltip")
+![alt_text](pgl/11.png)
 
 
 El siguiente paso es:
@@ -209,7 +209,7 @@ En este caso he corrido el programa, “Hola Mundo”
 <p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image11.png "image_tooltip")
+![alt_text](pgl/12.png)
 
 
 
@@ -266,5 +266,7 @@ Funciones en Haxe:
 
 
 ## Juegos hechos con Haxe
+
+
 
 
