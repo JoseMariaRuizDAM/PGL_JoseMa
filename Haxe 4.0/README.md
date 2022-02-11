@@ -222,6 +222,9 @@ Funciones en Haxe:
 
 ## Juegos hechos con Haxe
 
+[Dungeon of Gain alpha](https://www.youtube.com/watch?v=26-hg4OHlk8)
+[Defender's Quest: Valley of the Forgotten DX](https://www.youtube.com/watch?v=QEarmXpMag8)
+[ The Enchanted Cave 2 Premium Official Gameplay Trailer ](https://www.youtube.com/watch?v=UvBEr-L0HQY)
 
-
-
+## Conclusión
+Este motor de desarrollo es muy complejo a la hora de querer crear un juego, ya que no es apto para principiantes como otros motores de desarrollo de juegos en 2D. Esto es debido a que debes de tener conocimiento de código, aunque sea un lenguaje de programación.
