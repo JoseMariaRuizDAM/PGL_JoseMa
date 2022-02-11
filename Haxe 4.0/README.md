@@ -1,3 +1,5 @@
+<div align= "justify">
+    
 # HAXE 4
 ![alt_text](../pgl/unnamed.jpg)
 
@@ -230,3 +232,7 @@ Funciones en Haxe:
 
 ## Conclusión
 Este motor de desarrollo es muy complejo a la hora de querer crear un juego, ya que no es apto para principiantes como otros motores de desarrollo de juegos en 2D. Esto es debido a que debes de tener conocimiento de código, aunque sea un lenguaje de programación.
+    
+    
+</div>
+
