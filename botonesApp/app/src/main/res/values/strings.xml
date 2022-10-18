@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">botonesApp</string>
+    <string name="txtUsuario">Usuario</string>
+    <string name="txtPassword">Contraseña</string>
+</resources>
