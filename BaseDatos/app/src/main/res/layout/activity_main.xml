@@ -7,6 +7,19 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/stockEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Stock"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/precioEditText" />
+
+    <EditText
         android:id="@+id/nombreProductoEdittxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +36,7 @@
         android:id="@+id/IdEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="id Producto"
         android:inputType="number"
@@ -49,11 +62,11 @@
         android:id="@+id/BtnAgregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="68dp"
         android:onClick="insertar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/precioEditText"
+        app:layout_constraintTop_toBottomOf="@+id/stockEditText"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <ImageButton
@@ -61,10 +74,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="8dp"
         android:onClick="buscar"
         app:layout_constraintEnd_toStartOf="@+id/BtnAgregar"
-        app:layout_constraintTop_toBottomOf="@+id/precioEditText"
+        app:layout_constraintTop_toBottomOf="@+id/stockEditText"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
     <ImageButton
@@ -72,30 +85,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:onClick="eliminar"
         app:layout_constraintEnd_toStartOf="@+id/BtnBuscar"
-        app:layout_constraintTop_toBottomOf="@+id/precioEditText"
+        app:layout_constraintTop_toBottomOf="@+id/stockEditText"
         app:srcCompat="@android:drawable/ic_delete" />
 
     <ImageButton
         android:id="@+id/btnEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:onClick="editar"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-        app:layout_constraintTop_toBottomOf="@+id/precioEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stockEditText"
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <TableLayout
-        android:id="@+id/tbProducto"
-        android:layout_width="303dp"
-        android:layout_height="318dp"
+        android:id="@+id/tlProducto"
+        android:layout_width="286dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="359dp">
+        app:layout_constraintTop_toBottomOf="@+id/BtnBuscar">
 
         <TableRow
             android:layout_width="match_parent"
@@ -113,4 +130,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="pasarPantallaStock"
+        android:text="Stock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tlProducto" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

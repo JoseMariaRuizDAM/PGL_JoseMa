@@ -15,12 +15,17 @@ public class SQLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table productos (codigo int primary key, descripcion text, precio real)");
+        //unique para que solo pueda ser una descripcion unica en toda la base de datos
+
+        db.execSQL("create table productos (codigo int primary key, descripcion text unique, precio real, stock int)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldversion, int newversion) {
+    public void onUpgrade(SQLiteDatabase db, int oldversion, int newversion) {
 
     }
 
+    public void eliminarTabla(SQLiteDatabase db){
+        db.execSQL("DROP TABLE IF EXISTS productos");
+    }
 }
