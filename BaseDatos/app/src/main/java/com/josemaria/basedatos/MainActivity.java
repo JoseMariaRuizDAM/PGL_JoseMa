@@ -36,13 +36,15 @@ public class MainActivity extends AppCompatActivity {
 
         SQLite con = new SQLite(this, "tienda",null,1);
         SQLiteDatabase bd = con.getWritableDatabase();
+        Cursor total = bd.rawQuery("SELECT * FROM productos", null);
+        if(total.moveToFirst()){
+            llenarTabla();
+        }
         try{
 
         }catch(Exception e){
             con.onCreate(bd);
         }
-
-        llenarTabla();
 
     }
 
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             int codigo = Integer.parseInt(etCodigo.getText().toString());
             String descripcion = etDescripcion.getText().toString();
             double precio = Double.parseDouble(etPrecio.getText().toString());
-            int stock = 0;
+            int stock = Integer.parseInt(etStock.getText().toString());
 
             if (codigo > 0 && !descripcion.isEmpty() && precio > 0.00){
                 ContentValues registro = new ContentValues();
