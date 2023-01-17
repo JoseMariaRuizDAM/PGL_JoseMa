@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Regresar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Monedas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form #form="ngForm" (ngSubmit)="filtrarFormulario(form)">
+    <!--<form #form="ngForm">-->
+    <ion-header>
+      <ion-title class="ion-padding">Filtrar por:</ion-title>
+      <ion-item>
+        <ion-label>ID moneda: </ion-label>
+        <ion-input name="inputidmoneda" ngModel type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nombre monedas: </ion-label>
+        <ion-input name="inputnombremoneda" ngModel type="number"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" shape="round" color="primary" type="submit">Filtrar</ion-button>
+
+    </ion-header>
+  </form>
+<!--
+  <ion-list>
+    <ion-item ngFor="let moneda of monedasFiltradas">
+      <ion-label>{{moneda.nombre}} de {{moneda.pais}}</ion-label>
+    </ion-item>
+  </ion-list>-->
+</ion-content>
