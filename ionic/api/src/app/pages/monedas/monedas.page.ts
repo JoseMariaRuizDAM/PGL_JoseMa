@@ -32,12 +32,20 @@ export class MonedasPage implements OnInit {
     })
   }
 
-  monedasFiltradas!: Moneda[];
-  /*
+  monedasFiltradas!: Moneda[]; //Este atributo se usa en el html para *ngFor
+
   filtrarFormulario(formulario:NgForm){
     let controles = formulario.form.controls;
+    //console.log(controles);
     console.log(controles['inputidmoneda'].value);
     console.log(controles['inputnombremoneda'].value);
-  }*/
+    if(controles['inputidmoneda'].value > 0){
+      this.monedasService
+        .getMonedaId(controles['inputidmoneda'].value)
+        .subscribe((datos: any) =>{
+          this.monedasFiltradas = [datos];
+        });
+    }
+  }
 
 }
